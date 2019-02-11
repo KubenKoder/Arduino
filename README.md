@@ -40,7 +40,7 @@ Levande dokument som Jakob anvænder i kursen automatiseringssystemer før 2EL 2
 
 [ARDUINO slides](https://docs.google.com/presentation/d/1mvdF-Cz5dpTreEaJTI3VYqD3WL8-uSqXlwQEn87iamg/edit?usp=sharing)
 
-# CH340G driver for Arduino clone
+## CH340G driver for Arduino clone
 
 If you have a Arduino clone that does not register as a COM port when you plug it in, try installing this driver first.
 OBS! Needs admin rights.
