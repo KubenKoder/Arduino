@@ -11,9 +11,9 @@ Arduino-exempelkode modifierade før att virke bedre eller øversatte till (sv)n
 
 02 Digital > Button exemplet øversettet till norsk av en svensk. Skønner man denne och kan modifisere den så beherskar man grunderna i koding.
 
-[Med mye kommentarer](Egna%20exempel/Button_svorsk/Button_svorsk.ino)
+[Med mye kommentarer](Egna%20exempel/Button_Norsk/button_norsk.ino)
 
-[Med lite kommentarer](Egna%20exempel/Button_svorsk_lite_kommentarer/Button_svorsk_lite_kommentarer.ino)
+[Med lite kommentarer](Egna%20exempel/Button_Norsk_Kort/button_norsk_kort.ino)
 
 [Official button tutorial på engelsk](http://www.arduino.cc/en/Tutorial/Button)
 
