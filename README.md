@@ -7,9 +7,9 @@ Arduino-exempelkode modifierade før att virke bedre eller øversatte till (sv)n
 
 [Direkt till alla Egna Exempel](Egna%20exempel/)
 
-### Button på svorsk
+### Button på Norsk
 
-02 Digital > Button exemplet øversettet till norsk av en svensk. Skønner man denne och kan modifisere den så beherskar man grunderna i koding.
+02 Digital > Button exemplet øversettet till norsk . Skønner man denne och kan modifisere den så beherskar man grunderna i koding.
 
 [Med mye kommentarer](Egna%20exempel/Button_Norsk/button_norsk.ino)
 
