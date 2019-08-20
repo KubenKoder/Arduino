@@ -1,6 +1,8 @@
-# Rover Remote
+*Guides for the DFRobotshop rover kit*
 
-All examples below assumes that the rover responds to serial commands w,s,a,d. [See code](../rover/tank_wasd_keyboard_control/tank_wasd_keyboard_control.ino)
+# Rover Control schemes
+
+All examples below assumes that the rover responds to serial commands w,s,a,d. [See code](tank_wasd_keyboard_control/tank_wasd_keyboard_control.ino)
 
 ##  USB Control
 
@@ -18,7 +20,7 @@ There is a [bluetooth module](https://www.robotshop.com/en/dfrobot-serial-blueto
 
 * PC bluetooth. Try pairing it and using termial through Termite above? [or try this one, **untested**](http://www.bluesoleil.com/bssoftware/BSoftware.aspx)
 
-### Wifi / web control
+### Wifi control using esp8266 onboard web server
 
 We can build a web interface to control the [DF RobotShop rover](https://www.robotshop.com/en/dfrobotshop-rover-tracked-robot-basic-kit.html).
 
@@ -34,7 +36,12 @@ It's a 3.3V volt mircocontroller and the rover is 5V so we need to make sure to 
 
 All good, moving on.
 
-We should mod [this example code](../HelloServer_LED/HelloServer_LED.ino) to instead send 'w','s','a','d' bytes over serial connected to the TX / RX pins on the rover. Make sure to get the TX -> RX pins to speak to each other and vice versa. (T=transmit and R=recieve.)
+We should mod [this example code](../esp8266-nodemcu/HelloServer_LED/HelloServer_LED.ino) to instead send 'w','s','a','d' bytes over serial connected to the TX / RX pins on the rover. Make sure to get the TX -> RX pins to speak to each other and vice versa. (T=transmit and R=recieve.)
 
 We can wire it up and test it with male-female lab cables.
 
+*Telerobotics bonus idea*
+
+If we attach a mobile phone to the rover, we can make a video chat to the phone and see where it drives. 
+
+(Possible extension, use the headset jack to recieve the robot control signals to be able to steer it using computer generated audio signals tied to keystrokes)
