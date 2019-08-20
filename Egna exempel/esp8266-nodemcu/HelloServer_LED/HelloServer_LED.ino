@@ -4,8 +4,8 @@
 #include <ESP8266mDNS.h>
 
 #ifndef STASSID
-#define STASSID "Nissen"
-#define STAPSK  "bullerbysyndrom"
+#define STASSID "Red danger"
+#define STAPSK  "struldag"
 #endif
 
 const char* ssid = STASSID;
@@ -17,8 +17,9 @@ const int led = 16;
 
 void handleRoot() {
   //digitalWrite(led, 1);
-  server.send(200, "text/html", "<a href=\"http://192.168.1.10/led\">Turn led on</a>");
+  server.send(200, "text/html", "<a href=\"/led\">Turn led off</a>");
   digitalWrite(led, 0);
+   Serial.println("Led on");
 }
 
 void handleNotFound() {
@@ -64,8 +65,9 @@ void setup(void) {
   server.on("/", handleRoot);
 
   server.on("/led", []() {
-    server.send(200, "text/html", "<a href=\"http://192.168.1.10\">Turn LED off</a>");
+    server.send(200, "text/html", "<a href=\"/\">Turn LED on</a>");
      digitalWrite(led, 1);
+      Serial.println("Led off");
   });
 
   server.onNotFound(handleNotFound);
