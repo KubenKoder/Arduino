@@ -1,5 +1,11 @@
 *Guides for the DFRobotshop rover kit*
 
+# Assembly
+
+[![](http://img.youtube.com/vi/MWWoEul9Qsk/0.jpg)](http://www.youtube.com/watch?v=MWWoEul9Qsk "Rover")
+
+*Youtube video showing how to put the rover kit together*
+
 # Rover Control schemes
 
 All examples below assumes that the rover responds to serial commands w,s,a,d. [See code](tank_wasd_keyboard_control/tank_wasd_keyboard_control.ino)
