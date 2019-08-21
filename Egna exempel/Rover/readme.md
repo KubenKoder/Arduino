@@ -54,17 +54,25 @@ The Rover must be battery powered to run. The switch is ON when toggled towards 
 
 There is a [bluetooth module](https://www.robotshop.com/en/dfrobot-serial-bluetooth-module.html#Useful-Links) included in the kit.
 
-To use it, turn the POWER OFF by pushing the board switch outwards, unplug the USB cable and plug in the Bluetooth module to the board.
+To use it, first turn the POWER OFF by pushing the board switch outwards, unplug the USB cable and plug in the Bluetooth module to the board.
 
 #### Android App
 
+The Rover can be controlled via an Android app
+
 * [Android app control](https://www.robotshop.com/community/blog/show/dfrobotshop-rover-tutorial-control-with-android-app-bluetooth)
 
-#### iPhone control
+#### iPhone control - Not possible?
 
-* Iphone does not have a dedicated app, but we should be able to use something like this [Bluetooth terminal app](https://apps.apple.com/us/app/bluetooth-terminal/id1058693037) and use the same commands as when steering it via USB, see above.
+[The DFBluetoothV3 module specifications](https://www.dfrobot.com/product-360.html) state that it uses:
 
-* We can also try the [Blynk](https://blynk.io/) App to see if they give a smoother experience on iPhone.
+Bluetooth protocol: [Bluetooth Specification v2.0 + EDR](https://en.wikipedia.org/wiki/Bluetooth#Bluetooth_2.0_+_EDR)
+
+Support profiles: [Bluetooth serial port](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Serial_Port_Profile_(SPP))
+
+[Using Bluetooth as a serial port is not supported in iOS](https://support.apple.com/en-us/HT204387)
+
+Conclusion: This module will never work with regular iPhones due to iOS limitations.
 
 #### PC bluetooth control
 
@@ -72,12 +80,13 @@ If your PC has Bluetooth support you can connect to the Bluetooth module in Wind
 
 *How to connect to the Bluetooth board in windows*
 
-* IMPORTANT! Close all Serial monitor windows
+* IMPORTANT! First close all Arduino Serial monitor windows (the ones there you type the steering commands in.)
 
 * ![](img/bluetooth1.PNG)
 * ![](img/bluetooth2.PNG)
 * ![](img/bluetooth3.PNG)
 * ![](img/bluetooth4.PNG)
+* If you can't find it. Check that the "AT Mode" switch on the Bluetooth module is OFF and that the Rover battery pack is turned on.
 * ![](img/bluetooth5.PNG)
 * ![](img/bluetooth6.PNG)
 
@@ -87,12 +96,23 @@ If your PC has Bluetooth support you can connect to the Bluetooth module in Wind
 
 *You should be able to select it as a port as if you had a USB cable attached*
 
+**NOTE:** *If you have two COM Port choices, sadly only one will work, and it seems to be random which one it is. The "wrong" one will cause the Serial monitor window to freeze when you try to send commands through it. If that happens, press Ctrl+Shift+ESC and force a shut down of the frozen program as the picture below. Then start the Arduino program again and try the other COM port.
 
+* ![](img/bluetooth8.PNG)
 
+*DO THIS IF THE PROGRAM FREEZES!*
 
-(Alternative, use termial through Termite (free software)) 
+* ![](img/bluetooth9.PNG)
 
-### Wifi control using esp8266 onboard web server
+**NOTE:** *The BAUD RATE is different when using bluetooth. Make sure to correct it. [Baud = symbols per second](https://en.wikipedia.org/wiki/Baud)
+
+* Now you can steer the Rover via your PC!
+
+**COMMON PROBLEMS**
+
+* If you can't choose any COM port in the Arduino program even if windows says you are connected, you need to restart the PC and try again. 
+
+# Wifi control using esp8266 onboard web server - FUTURE DEVELOPMENTS
 
 We can build a web interface to control the [DF RobotShop rover](https://www.robotshop.com/en/dfrobotshop-rover-tracked-robot-basic-kit.html).
 
