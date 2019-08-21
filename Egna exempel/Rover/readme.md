@@ -6,13 +6,21 @@
 
 *Youtube video showing how to put the rover kit together*
 
+# Rover resources
+
+* [PDF Detailed user manual](https://www.robotshop.com/media/files/pdf/dfrobotshop-rover-user-guide.pdf)
+* [PDF Schematic](https://www.robotshop.com/media/files/pdf/dfrobotshop-rover-schematic.pdf)
+* [ZIP Sample code](https://www.robotshop.com/content/ZIP/dfrobotshop_rover_sample_code.zip)
+
 # Rover Control schemes
 
 All examples below assumes that the rover responds to serial commands w,s,a,d. [See code](tank_wasd_keyboard_control/tank_wasd_keyboard_control.ino)
 
 ##  USB Control
 
-[This video](https://www.youtube.com/watch?v=Tpe6ubhmzrI&t=126s) from DFrobotshop shows how to connect to it via serial over USB and using the PC program Hyperterminal. I suggest we use the free program [Termite](https://www.compuphase.com/software_termite.htm) instead. 
+* [Official rover setup video]https://www.youtube.com/watch?v=Tpe6ubhmzrI
+
+The video DFrobotshop shows how to connect to it via serial over USB and using the PC program Hyperterminal. I suggest we use the free program [Termite](https://www.compuphase.com/software_termite.htm) instead. 
 
 ## Wireless control
     
@@ -23,6 +31,8 @@ There is a [bluetooth module](https://www.robotshop.com/en/dfrobot-serial-blueto
 * [Android app control](https://www.robotshop.com/community/blog/show/dfrobotshop-rover-tutorial-control-with-android-app-bluetooth)
 
 * Iphone does not have a dedicated app, but we should be able to use something like this [Bluetooth terminal app](https://apps.apple.com/us/app/bluetooth-terminal/id1058693037) and use the same commands as when steering it via USB, see above.
+
+* We can also try the [Blynk](https://blynk.io/) App to see if they give a smoother experience on iPhone.
 
 * PC bluetooth. Try pairing it and using termial through Termite above? [or try this one, **untested**](http://www.bluesoleil.com/bssoftware/BSoftware.aspx)
 
