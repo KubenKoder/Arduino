@@ -6,7 +6,37 @@ All examples below assumes that the rover responds to serial commands w,s,a,d. [
 
 ##  USB Control
 
-[This video](https://www.youtube.com/watch?v=Tpe6ubhmzrI&t=126s) from DFrobotshop shows how to connect to it via serial over USB and using the PC program Hyperterminal. I suggest we use the free program [Termite](https://www.compuphase.com/software_termite.htm) instead. 
+_Installation guide_
+
+* Download the Arduino software ZIP file, [Choose JUST DOWNLOAD](https://www.arduino.cc/en/Main/Donate)
+* Find the downloaded file in your downloads folder.
+* Unpack the ZIP file (Høyreklikk og "Pakk ut alle" på ZIP fila i Downloads mappen)
+* Run the Arduino program from the folder you unpakked. (Bonus: Right klick and add a shortcut to your desktop for later use.)
+* Copy [all this code](https://raw.githubusercontent.com/KubenKoder/Arduino/master/Egna%20exempel/Rover/tank_wasd_keyboard_control/tank_wasd_keyboard_control.ino)
+* Empty the Arduino window and Paste in the code you copied
+* Plug in the Rover USB cable to your PC
+* Unplug the Bluetooth module from the Rover, it interfears with the programming signals. 
+* Under the Tools menu in the Arduion program ("Verktøy?"), find and select the Port, it is called a COM number that changes when you plug things in and out.
+* Now find the arrrow button that says Upload when you hover over it, press that one and wait a bit.
+* The rover is now programmed.
+
+_Steering the rover via the Serial monitor_
+
+![](img/serial.PNG)
+
+*How to open and configure the serial monitor*
+
+You can steer the rover by sending it these letters:
+
+* W = Forward
+* S = Reverse
+* A = Steer left
+* D = Steer right
+* Spacebar = Stop
+
+Send commands with the Enter key.
+
+The Rover must be battery powered to run. The switch is ON when toggled towards the center.
 
 ## Wireless control
     
