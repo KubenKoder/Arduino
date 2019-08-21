@@ -40,13 +40,11 @@ _Steering the rover via the Serial monitor_
 
 You can steer the rover by sending it these letters:
 
-* W = Forward
-* S = Reverse
-* A = Steer left
-* D = Steer right
-* Spacebar = Stop
-
-Send commands with the Enter key.
+* W + Enter = Forward
+* S + Enter = Reverse
+* A + Enter = Steer left
+* D + Enter = Steer right
+* Spacebar + Enter = Stop
 
 The Rover must be battery powered to run. The switch is ON when toggled towards the center.
 
@@ -56,13 +54,43 @@ The Rover must be battery powered to run. The switch is ON when toggled towards 
 
 There is a [bluetooth module](https://www.robotshop.com/en/dfrobot-serial-bluetooth-module.html#Useful-Links) included in the kit.
 
+To use it, turn the POWER OFF by pushing the board switch outwards, unplug the USB cable and plug in the Bluetooth module to the board.
+
+#### Android App
+
 * [Android app control](https://www.robotshop.com/community/blog/show/dfrobotshop-rover-tutorial-control-with-android-app-bluetooth)
+
+#### iPhone control
 
 * Iphone does not have a dedicated app, but we should be able to use something like this [Bluetooth terminal app](https://apps.apple.com/us/app/bluetooth-terminal/id1058693037) and use the same commands as when steering it via USB, see above.
 
 * We can also try the [Blynk](https://blynk.io/) App to see if they give a smoother experience on iPhone.
 
-* PC bluetooth. Try pairing it and using termial through Termite above? [or try this one, **untested**](http://www.bluesoleil.com/bssoftware/BSoftware.aspx)
+#### PC bluetooth control
+
+If your PC has Bluetooth support you can connect to the Bluetooth module in Windows and then steer the Rover through the Arduino serial monitor.
+
+*How to connect to the Bluetooth board in windows*
+
+* IMPORTANT! Close all Serial monitor windows
+
+* ![](img/bluetooth1.PNG)
+* ![](img/bluetooth2.PNG)
+* ![](img/bluetooth3.PNG)
+* ![](img/bluetooth4.PNG)
+* ![](img/bluetooth5.PNG)
+* ![](img/bluetooth6.PNG)
+
+*The Rover is now paired to your PC and will reconnect automatically when possible, this may block other connections to it*
+
+* ![](img/bluetooth7.PNG)
+
+*You should be able to select it as a port as if you had a USB cable attached*
+
+
+
+
+(Alternative, use termial through Termite (free software)) 
 
 ### Wifi control using esp8266 onboard web server
 
