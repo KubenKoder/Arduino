@@ -18,7 +18,7 @@ All examples below assumes that the rover responds to serial commands w,s,a,d. [
 
 ##  USB Control
 
-* [Official rover setup video]https://www.youtube.com/watch?v=Tpe6ubhmzrI
+* [Official rover setup video](https://www.youtube.com/watch?v=Tpe6ubhmzrI)
 
 The video DFrobotshop shows how to connect to it via serial over USB and using the PC program Hyperterminal. I suggest we use the free program [Termite](https://www.compuphase.com/software_termite.htm) instead. 
 
