@@ -112,27 +112,78 @@ If your PC has Bluetooth support you can connect to the Bluetooth module in Wind
 
 * If you can't choose any COM port in the Arduino program even if windows says you are connected, you need to restart the PC and try again. 
 
-# Wifi control using esp8266 onboard web server - FUTURE DEVELOPMENTS
+# Wifi control using esp8266 onboard web server - NOW WORKING
 
-We can build a web interface to control the [DF RobotShop rover](https://www.robotshop.com/en/dfrobotshop-rover-tracked-robot-basic-kit.html).
+A web interface to control the [DF RobotShop rover](https://www.robotshop.com/en/dfrobotshop-rover-tracked-robot-basic-kit.html).
 
-To accomplice this we will use a ESP8266 Wifi-microcontroller module that is Arduino compatible.
+To accomplice this we will use a ESP8266 Wifi-microcontroller module that is Arduino compatible. We'll use the NodeMCU 1.0 board.
+
+## Description
+
+The ESP8266 microcontroller will act as a webserver and host a webpage to anyone on the local wireless network. The page will have buttons that makes the microcontroller send the w,s,a,d text commands over serial connection to the Rover through the same pin header as we used for bluetooth.
+
+The webserver will be accessable by entering its ip number in the web browser. The IP will be sent over serial USB to the PC. Or possibly we can connect to it by its mDNS name, but that seems to only work in some cases.
 
 It's a 3.3V volt mircocontroller and the rover is 5V so we need to make sure to not fry it. 
 
-*3.3 V vs 5V Checklist:*
-
+## 3.3 V vs 5V Checklist:
 * Supply voltage - CHECK, There is a ams1117 5V to 3.3V Linear Regulator on the NODEMCU dev board. Rover outputs ~5V for the bluetooth module. 
 * Input Rx voltage - esp8266 should be 5V input compatible according to tests, see [source](https://hackaday.com/2016/07/28/ask-hackaday-is-the-esp8266-5v-tolerant/) and [source, expressif CEO](https://www.facebook.com/groups/1499045113679103/permalink/1731855033731442/?hc_location=ufi). So we need not worry.
 * Output voltage / current draw - Should be ok, Rx input is high impedance and should read >~2V as high. See [source](https://learn.sparkfun.com/tutorials/logic-levels/ttl-logic-levels)
 
 All good, moving on.
 
-We should mod [this example code](../esp8266-nodemcu/HelloServer_LED/HelloServer_LED.ino) to instead send 'w','s','a','d' bytes over serial connected to the TX / RX pins on the rover. Make sure to get the TX -> RX pins to speak to each other and vice versa. (T=transmit and R=recieve.)
+## Programming the module
 
-We can wire it up and test it with male-female lab cables.
+To upload ESP8266 code via the arduino program you need to add support for the EPS first.
+* Open the Arduino IDE (the windows program)
+* Click on the menu "File -> Preferences".
+* In  "Aditional Boards Manager URLs" add **this adress line* to the text box and then click on "OK":
+ <code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code> (don't klick the link)
+* In the menu Go to "Tools -> Board -> Boards Manager", type "ESP8266" and install it.
+* Go again to "Tools -> Board" and select "NodeMCU 1.0". (It's the type of development board we are using, the same microcontroller comes mounted on many different boards.)
+* Copy this [code](../esp8266-nodemcu/Rover_wifi/Rover_wifi.ino) to the Arduino program
+* Change the ROVERNAME from "rolf" to something fun. We'll 
+* Select the correct Tools -> Port COM number and upload as usual.
+* **NOTE:** *You can not have the wifi card connected to a powered Rover while programming it. It will get confused as the Rover will start talking to it while it tries to send the program. Unplug the 5V cable between the cards and turn the rover battery pack off.* 
+* Restart the ESP8266 module by pressing the tiny reset button on it and then check the serial monitor, **baud 9600**. It should give you the IP nr. Note it down.
 
-*Telerobotics bonus idea*
+Now we know the module can connect to the wireless network.
+
+## Finding the webpage
+
+**Test this before wireing.**
+
+* Connect your device (PC or phone) to the wifi network that the Rover is connected to. In our case it's wireless network **"NETGEAR65"** with password **"precioustomato788"**
+* Type http://**192.168.0.110** into a web browser, but use the **ip number** that your rover got instead. This might chane if you have turned it off a longer time.
+* *Alternative adress, sometimes works:* Type http://**rolf**.local into your web browser, but instead of **rolf** use the fun name you gave it in the code. This worked best in safari, and sometimes on chrome on an iPhone and never on PC windows. *Probably my mDNS setup on the ESP8266 needs to be improved. This would save us the hassle with the IP nr.*
+* When then page loads. Click the buttons on the page and look in the Serial monitor, it should display the approriate letters. This is what will be sent to the rover.
+
+Now we know that we can connect to the page **and** we can make it send serial commands like the bluetooth module did.
+
+### Wireing:
+
+We can wire it up and test it with male-female lab cables. Or male-male cables and a breadboard.
+
+**Rover Bluetooth header -> ESP8266**
+* GND -> GND
+* 5V -> Vin
+* Tx -> Rx (transmit to recieve)
+* Rx -> Tx (recieve to transmit)
+
+* NC = not connected
+
+The rover will power the wifi module like it did the bluetooth module so you can unplug the USB cable.
+
+**Testing**
+* Try turning on the rover and accessing the web page using the ip adress. Remember that you need to be connected to the same wireless network. (Network **NETGEAR65"** with password **"precioustomato788"** is the default.) 
+* Have fun! 
+
+### Expanding the webpage
+
+You can edit the code that is uploaded to the ESP8266 and add lines and change the commands as you please.
+
+#### Telerobotics bonus idea
 
 If we attach a mobile phone to the rover, we can make a video chat to the phone and see where it drives. 
 

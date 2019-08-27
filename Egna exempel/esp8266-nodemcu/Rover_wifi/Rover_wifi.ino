@@ -4,8 +4,9 @@
 #include <ESP8266mDNS.h>
 
 #ifndef STASSID
-#define STASSID "Red danger"
-#define STAPSK  "struldag"
+#define STASSID "NETGEAR65" // Wifi network to connect to
+#define STAPSK  "precioustomato788" //Wifi password
+#define ROVERNAME  "rolf" //name your rover, one word, no special letters or capital letters.
 #endif
 
 const char* ssid = STASSID;
@@ -13,10 +14,16 @@ const char* password = STAPSK;
 
 ESP8266WebServer server(80);
 
+
+void navigationPage(){
+  // Webpage goes here
+ server.send(200, "text/html", "<a href=\"/forward\">Forward</a> <br> <a href=\"/backwards\">Backwards</a> <br> <a href=\"/left\">Left</a> <br> <a href=\"/right\">Right</a> <br> <a href=\"/stop\">STOP</a>");
+}
 void handleRoot() {
 
-  server.send(200, "text/html", "<a href=\"/forward\">Forward</a><br><a href=\"/backwards\">Backwards</a><br><a href=\"/left\">Left</a><br><a href=\"/right\">Right</a><br><a href=\"/stop\">STOP</a>");
-}
+  // Webpage goes here
+ navigationPage();
+ }
 
 void handleNotFound() {
   String message = "File Not Found\n\n";
@@ -32,6 +39,9 @@ void handleNotFound() {
   }
   server.send(404, "text/plain", message);
 }
+
+
+
 
 void setup(void) {
   Serial.begin(9600);
@@ -50,39 +60,36 @@ void setup(void) {
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
 
-  if (MDNS.begin("esp8266")) {
+  if (MDNS.begin(ROVERNAME)) {
     Serial.println("MDNS responder started");
   }
 
   server.on("/", handleRoot);
 
   server.on("/forward", []() {
-server.send(200, "text/html", "<a href=\"/forward\">Forward</a><br><a href=\"/backwards\">Backwards</a><br><a href=\"/left\">Left</a><br><a href=\"/right\">Right</a><br><a href=\"/stop\">STOP</a>");
-
-      Serial.println("w");
+      Serial.print("w");
+      navigationPage();
   });
 
 
   server.on("/backwards", []() {
-server.send(200, "text/html", "<a href=\"/forward\">Forward</a><br><a href=\"/backwards\">Backwards</a><br><a href=\"/left\">Left</a><br><a href=\"/right\">Right</a><br><a href=\"/stop\">STOP</a>");
-
-      Serial.println("s");
+      Serial.print("s");
+      navigationPage();
   });
 
     server.on("/left", []() {
-server.send(200, "text/html", "<a href=\"/forward\">Forward</a><br><a href=\"/backwards\">Backwards</a><br><a href=\"/left\">Left</a><br><a href=\"/right\">Right</a><br><a href=\"/stop\">STOP</a>");
-
-      Serial.println("a");
+      Serial.print("a");
+      navigationPage();
   });
 
     server.on("/right", []() {
-server.send(200, "text/html", "<a href=\"/forward\">Forward</a><br><a href=\"/backwards\">Backwards</a><br><a href=\"/left\">Left</a><br><a href=\"/right\">Right</a><br><a href=\"/stop\">STOP</a>");
-      Serial.println("d");
+Serial.print("d");
+navigationPage();
   });
 
     server.on("/stop", []() {
-server.send(200, "text/html", "<a href=\"/forward\">Forward</a><br><a href=\"/backwards\">Backwards</a><br><a href=\"/left\">Left</a><br><a href=\"/right\">Right</a><br><a href=\"/stop\">STOP</a>");
-      Serial.println(" ");
+Serial.print(" ");
+navigationPage();
   });
 
   server.onNotFound(handleNotFound);
