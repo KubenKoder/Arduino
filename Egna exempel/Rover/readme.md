@@ -82,17 +82,17 @@ If your PC has Bluetooth support you can connect to the Bluetooth module in Wind
 
 * IMPORTANT! First close all Arduino Serial monitor windows (the ones there you type the steering commands in.)
 
-* ![](img/bluetooth1.PNG)
-* ![](img/bluetooth2.PNG)
-* ![](img/bluetooth3.PNG)
-* ![](img/bluetooth4.PNG)
+* ![](img/bluetooth1.png)
+* ![](img/bluetooth2.png)
+* ![](img/bluetooth3.png)
+* ![](img/bluetooth4.png)
 * If you can't find it. Check that the "AT Mode" switch on the Bluetooth module is OFF and that the Rover battery pack is turned on.
-* ![](img/bluetooth5.PNG)
-* ![](img/bluetooth6.PNG)
+* ![](img/bluetooth5.png)
+* ![](img/bluetooth6.png)
 
 *The Rover is now paired to your PC and will reconnect automatically when possible, this may block other connections to it*
 
-* ![](img/bluetooth7.PNG)
+* ![](img/bluetooth7.png)
 
 *You should be able to select it as a port as if you had a USB cable attached*
 
