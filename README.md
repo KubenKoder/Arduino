@@ -1,51 +1,50 @@
 # Arduino
-Arduinomaterialer, exempler och guider.
 
-## Egna exempel
+Arduino materialer, eksempler og guider
 
-Arduino-exempelkode modifierade før att virke bedre eller øversatte till (sv)norsk før å vara lettare å skønne.
+## Egne eksempler
 
-[Direkt till alla Egna Exempel](Egna%20exempel/)
+Arduino eksempelkode endret for å fungere bedre eller oversatt til norsk for å være lettere å forstå.
+
+[Lenke til "Egne eksempler" mappen](Egna%20exempel/)
 
 ### Button på Norsk
 
-02 Digital > Button exemplet øversettet till norsk . Skønner man denne och kan modifisere den så beherskar man grunderna i koding.
+02 Digital > Button eksemepelet oversatt til norsk. Hvis man skjønner hvordan denne fungerer og kan modifisere den selv så behersker man grunnleggende programmering.
 
-[Med mye kommentarer](Egna%20exempel/Button_Norsk/button_norsk.ino)
+[Med mange kommentarer](Egna%20exempel/Button_Norsk/button_norsk.ino)
 
-[Med lite kommentarer](Egna%20exempel/Button_Norsk_Kort/button_norsk_kort.ino)
+[Med få kommentarer](Egna%20exempel/Button_Norsk_Kort/button_norsk_kort.ino)
 
-[Official button tutorial på engelsk](http://www.arduino.cc/en/Tutorial/Button)
+[Arduino sin Button tutorial](http://www.arduino.cc/en/Tutorial/Button)
 
-### AnalogReadSerial med 0 och 1023 referenser før plot
+### AnalogReadSerial med 0 og 1023 referenser før plot
 
-Bruk denne før å visa varfør vi trenger en pull-down resistor på bryter-exemplet.
+Bruk denne for å vise hvorfor vi trenger en pull-down resistor på bryter-eksempelet.
 
-[AnalogReadSerial_with_0](Egna%20exempel/AnalogReadSerial_with_0/AnalogReadSerial_with_0.ino)
+[Analog Serial Read med 0](Egna%20exempel/AnalogReadSerial_with_0/AnalogReadSerial_with_0.ino)
 
 ### Ping_mod
 
-An improved arduino example sketch which work with cheap range sensors that otherwise sometimes get stuck waiting for missed echos.
-It takes the Examples > 06. Sensors > Ping example and adds a timeout timer which it uses to pull the input low to reset the sensor if it gets stuck.
+Et forbedret eksemepl av en Arduino sketch som virker med billige distanse sensorer. Det er basert på sketchen fra Examples | 06. Sensor | Ping og den har en timer som hindrer at sensoren blir stuck.
 
-Works with both 3 and 4 pin ultrasonic range finders, on the 4 pin ones combine the TRIG and ECHO to make a combined SIG pin. 
+Den fungerer med både 3 og 4 pins ultrasonic range finder sensorer. Når du bruker 4 pins kombinerer du TRIG og ECHO pinen for å lage en SIG pin.
 
-[Link till koden](Egna%20exempel/Ping_mod/Ping_mod.ino)
+[Link til koden](Egna%20exempel/Ping_mod/Ping_mod.ino)
 
-Original Ping tutorial with wireing: [https://www.arduino.cc/en/Tutorial/Ping](https://www.arduino.cc/en/Tutorial/Ping)
+Original Ping tutorial med oppkobling: [https://www.arduino.cc/en/Tutorial/Ping](https://www.arduino.cc/en/Tutorial/Ping)
 
 ## Jakobs presentations-slides 
 
-Levande dokument som Jakob anvænder i kursen automatiseringssystemer før 2EL 2019.
+Levende dokument som Jakob bruker i automatiseringssystem kursene for 2EL 2019.
 
 [ARDUINO slides](https://docs.google.com/presentation/d/1mvdF-Cz5dpTreEaJTI3VYqD3WL8-uSqXlwQEn87iamg/edit?usp=sharing)
 
 ## CH340G driver for Arduino clone
 
-If you have a Arduino clone that does not register as a COM port when you plug it in, try installing this driver first.
-OBS! Needs admin rights.
+Hvis Arduino chipen ikke blir gjenkjent som en COM port når du plugger den in kan du installere denne driveren først. Installasjonen av driveren krever admin rettigheter på maskinen.
 
-[Download](https://github.com/KubenKoder/Arduino/raw/master/USB%20driver/CH341SER.EXE)
+[Last Ned](https://github.com/KubenKoder/Arduino/raw/master/USB%20driver/CH341SER.EXE)
 
 
 
