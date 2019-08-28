@@ -128,9 +128,15 @@ The webserver will be accessable by entering its ip number in the web browser. T
 
 ## Programming the module
 
-This is the Wifi-module, it needs to be programmed with the code to run the webpage and send the commands to the rover.
+This is the ESP8266 Wifi-module, it needs to be programmed with the code to run the webpage and send the commands to the rover.
 
 ![](../esp8266-nodemcu/img/esp8266.PNG)
+
+**DRIVERS**
+* *If you have admin rights and have installed and not just unzipped the arduino program you can skip this step*
+* To connect out PC to it we first need some drivers. [Download them here](../USB%20driver/CP210x_Universal_Windows_Driver.zip)
+* To install them you need admin privileges, ask your teacher when you are ready! 
+
 
 To upload ESP8266 code via the arduino program you need to add support for the EPS first.
 * Open the Arduino IDE (the windows program)
@@ -138,11 +144,11 @@ To upload ESP8266 code via the arduino program you need to add support for the E
 * In  "Aditional Boards Manager URLs" add **this adress line* to the text box and then click on "OK":
  <code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code> (don't klick the link)
 * In the menu Go to "Tools -> Board -> Boards Manager", type "ESP8266" and install it.
-* Go again to "Tools -> Board" and select "NodeMCU 1.0". (It's the type of development board we are using, the same microcontroller comes mounted on many different boards.)
+* Go again to "Tools -> Board" and select "NodeMCU 1.0". (It's the type of development board we are using, the same microcontroller can be mounted on many different boards.)
 * Copy this [code](../esp8266-nodemcu/Rover_wifi/Rover_wifi.ino) to the Arduino program
-* Change the ROVERNAME from "rolf" to something fun. We'll 
+* Change the ROVERNAME from "rolf" to something fun. You can use it to find the webpage later.
 * Select the correct Tools -> Port COM number and upload as usual.
-* **NOTE:** *You can not have the wifi card connected to a powered Rover while programming it. It will get confused as the Rover will start talking to it while it tries to send the program. Unplug the 5V cable between the cards and turn the rover battery pack off.* 
+* **NOTE:** *You can not have the wifi card connected to a powered Rover while programming it. It will get confused as the Rover will start talking to it at the same time.* 
 * Restart the ESP8266 module by pressing the tiny reset button on it and then check the serial monitor, **baud 9600**. It should give you the IP nr. Note it down.
 
 Now we know the module can connect to the wireless network.
