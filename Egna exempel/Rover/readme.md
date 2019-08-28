@@ -114,26 +114,23 @@ If your PC has Bluetooth support you can connect to the Bluetooth module in Wind
 
 # Wifi control using esp8266 onboard web server - NOW WORKING
 
-A web interface to control the [DF RobotShop rover](https://www.robotshop.com/en/dfrobotshop-rover-tracked-robot-basic-kit.html).
+## Description
+
+This mehod gives you a simple web interface to control the [DF RobotShop rover](https://www.robotshop.com/en/dfrobotshop-rover-tracked-robot-basic-kit.html). 
+
+The web page will only be accessable on the local wifi-network, so you will need to connect to the same wifi net with your phone/PC to operate it.
 
 To accomplice this we will use a ESP8266 Wifi-microcontroller module that is Arduino compatible. We'll use the NodeMCU 1.0 board.
-
-## Description
 
 The ESP8266 microcontroller will act as a webserver and host a webpage to anyone on the local wireless network. The page will have buttons that makes the microcontroller send the w,s,a,d text commands over serial connection to the Rover through the same pin header as we used for bluetooth.
 
 The webserver will be accessable by entering its ip number in the web browser. The IP will be sent over serial USB to the PC. Or possibly we can connect to it by its mDNS name, but that seems to only work in some cases.
 
-It's a 3.3V volt mircocontroller and the rover is 5V so we need to make sure to not fry it. 
-
-## 3.3 V vs 5V Checklist:
-* Supply voltage - CHECK, There is a ams1117 5V to 3.3V Linear Regulator on the NODEMCU dev board. Rover outputs ~5V for the bluetooth module. 
-* Input Rx voltage - esp8266 should be 5V input compatible according to tests, see [source](https://hackaday.com/2016/07/28/ask-hackaday-is-the-esp8266-5v-tolerant/) and [source, expressif CEO](https://www.facebook.com/groups/1499045113679103/permalink/1731855033731442/?hc_location=ufi). So we need not worry.
-* Output voltage / current draw - Should be ok, Rx input is high impedance and should read >~2V as high. See [source](https://learn.sparkfun.com/tutorials/logic-levels/ttl-logic-levels)
-
-All good, moving on.
-
 ## Programming the module
+
+This is the Wifi-module, it needs to be programmed with the code to run the webpage and send the commands to the rover.
+
+![](../esp8266-nodemcu/img/esp8266.PNG)
 
 To upload ESP8266 code via the arduino program you need to add support for the EPS first.
 * Open the Arduino IDE (the windows program)
@@ -152,18 +149,24 @@ Now we know the module can connect to the wireless network.
 
 ## Finding the webpage
 
-**Test this before wireing.**
+**Test this before connecting it to the rover to avoid confusion**
 
 * Connect your device (PC or phone) to the wifi network that the Rover is connected to. In our case it's wireless network **"NETGEAR65"** with password **"precioustomato788"**
-* Type http://**192.168.0.110** into a web browser, but use the **ip number** that your rover got instead. This might chane if you have turned it off a longer time.
-* *Alternative adress, sometimes works:* Type http://**rolf**.local into your web browser, but instead of **rolf** use the fun name you gave it in the code. This worked best in safari, and sometimes on chrome on an iPhone and never on PC windows. *Probably my mDNS setup on the ESP8266 needs to be improved. This would save us the hassle with the IP nr.*
+* Type http://**192.168.0.110** into a web browser, but use the **ip number** that your rover got instead. This might change if you have turned it off a longer time.
+* *Alternative adress, sometimes works:* Type http://**rolf**.local into your web browser, but instead of **rolf** use the fun name you gave it in the code. **This worked really well in safari, and sometimes on chrome on an iPhone and never on PC windows**. *Probably my mDNS setup code for the ESP8266 needs to be improved. This would save us future hassle with the IP nr.*
 * When then page loads. Click the buttons on the page and look in the Serial monitor, it should display the approriate letters. This is what will be sent to the rover.
 
 Now we know that we can connect to the page **and** we can make it send serial commands like the bluetooth module did.
 
-### Wireing:
+### Wireing
 
-We can wire it up and test it with male-female lab cables. Or male-male cables and a breadboard.
+To connect it to the rover we need four male-female jumper cables. (Or four male-male cables and a breadboard.)
+
+![](img/jumpers.webp)
+
+Try to figure out a way to prevent the pins on the module to touch metal on the Rover, perhaps use tape?
+
+The rover will power the wifi module like it did the bluetooth module so you should unplug the USB cable from the module.
 
 **Rover Bluetooth header -> ESP8266**
 * GND -> GND
@@ -173,15 +176,24 @@ We can wire it up and test it with male-female lab cables. Or male-male cables a
 
 * NC = not connected
 
-The rover will power the wifi module like it did the bluetooth module so you can unplug the USB cable.
-
-**Testing**
+### Testing
 * Try turning on the rover and accessing the web page using the ip adress. Remember that you need to be connected to the same wireless network. (Network **NETGEAR65"** with password **"precioustomato788"** is the default.) 
 * Have fun! 
 
-### Expanding the webpage
+#### Expanding the webpage
 
 You can edit the code that is uploaded to the ESP8266 and add lines and change the commands as you please.
+
+#### A note about combining different voltage levels
+
+The ESP8266 is a 3.3V volt mircocontroller and the rover is a 5V Arduino so I have made sure they will not get damaged. 
+
+##### My 3.3 V vs 5V Checklist:
+* Supply voltage - CHECK, There is a ams1117 5V to 3.3V Linear Regulator on the NODEMCU dev board. Rover outputs ~5V for the bluetooth module. 
+* Input Rx voltage - Esp8266 should be 5V input compatible according to tests, see [source](https://hackaday.com/2016/07/28/ask-hackaday-is-the-esp8266-5v-tolerant/) and [source, expressif CEO](https://www.facebook.com/groups/1499045113679103/permalink/1731855033731442/?hc_location=ufi). So we need not worry.
+* Output voltage / current draw - Should be ok, Rx input is high impedance and should read >~2V as high. See [source](https://learn.sparkfun.com/tutorials/logic-levels/ttl-logic-levels)
+
+All good, we can connect the ESP8266 3.3V logic pins directly to the arduino 5V pins without fearing damage.
 
 #### Telerobotics bonus idea
 
