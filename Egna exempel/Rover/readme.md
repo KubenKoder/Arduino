@@ -134,7 +134,7 @@ This is the ESP8266 Wifi-module, it needs to be programmed with the code to run 
 
 **DRIVERS**
 * *If you have admin rights and have installed and not just unzipped the arduino program you can skip this step*
-* To connect out PC to it we first need some drivers. [Download them here](../USB%20driver/CP210x_Universal_Windows_Driver.zip)
+* To connect out PC to it we first need some drivers. [Download them here](https://github.com/KubenKoder/Arduino/blob/master/USB%20driver/CP210x_Universal_Windows_Driver.zip)
 * To install them you need admin privileges, ask your teacher when you are ready! 
 
 
