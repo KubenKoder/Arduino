@@ -64,6 +64,16 @@ int distance;
 
 ## IF - Hvis noe er sant, gjør dette
 
-[code med if satser for å reagere på sensor](ultrasound_rover/ultrasound_rover.ino)
+[Kode med if satser for å reagere på sensor](ultrasound_rover/ultrasound_rover.ino)
+
+<code>
+// Reagere på sensor
+if(distance <20){
+  reverse(120, 120); //Bakke i halv fart (255 er max)
+  delay(2000); //bakke i 2 sekunder (i millisekunder)
+  stop();
+}
+//Slutt på reaksjon
+                  </code>
 
 
