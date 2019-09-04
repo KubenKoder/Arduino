@@ -53,11 +53,10 @@ Serial.println(distance);
 
 // Reagere på sensor
 if(distance <20){
-  reverse(120, 120); //Bakke
-  delay(2000);
+  reverse(120, 120); //Bakke i halv fart (255 er max)
+  delay(2000); //bakke i 2 sekunder (i millisekunder)
   stop();
 }
-
 //Slutt på reaksjon
 
       
