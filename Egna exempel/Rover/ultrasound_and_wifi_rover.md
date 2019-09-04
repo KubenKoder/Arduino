@@ -36,5 +36,32 @@ const int echoPin = 10;
 
 Du kan ikke bruke samme pin til forksellige funksjoner. Vis du har en kollisjon så må du flytte sensor-pinnerne, motor-pinnernen er faste i rovern. 
 
+## Slå sammen kode
+
+Koden har tre hoveddeler. 
+
+* Ting som har med minne og gjøre
+* Setup delen
+* Loop delen
+
+(Rover programmet har i tillegg ekstra deler for forward, reverse, left, right og stop.)
+
+Når du slår ting sammen så må du hålle kode fra en del inom sin del. Det hjelper å markere hva som er hva med kommentarer i koden, de gjør du med to //-tegn. Allt bak dem blir ignorert i koden.
+
+På denne måten:
+
+<Code>
+// SENSOR-TING
+// defines pins numbers
+const int trigPin = 9;
+const int echoPin = 10;
+// defines variables
+long duration;
+int distance;
+//SLUTT PÅ SENSOR-TING
+</Code>
+
+
+[code med if satser for å reagere på sensor](ultrasound_rover/ultrasound_rover.ino)
 
 
