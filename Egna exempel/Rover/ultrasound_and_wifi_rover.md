@@ -20,19 +20,19 @@ Når vi skall smelte to Arduino-programmer sammen så må vi passe på å ikke b
 
 Rover-programmet bruker koblingspunkter 5 til 8 for å styre motorerne. Koblingspunkter kalles ofte "pins".
 
-<code>
+```cpp
 int E1 = 6; //M1 Speed Control
 int E2 = 5; //M2 Speed Control
 int M1 = 8; //M1 Direction Control
 int M2 = 7; //M2 Direction Control
-</code>
+```
 
 Dette sensor-programmet bruker pins 9 og 10 så de passer sammen. (Det finns sikkert 100 forskellige sensor-programmer på nett som gjører samme sak, lit forskellig.)
 
-<code>
+```cpp
 const int trigPin = 9;
 const int echoPin = 10;
-</code>
+```
 
 Du kan ikke bruke samme pin til forksellige funksjoner. Vis du har en kollisjon så må du flytte sensor-pinnerne, motor-pinnernen er faste i rovern. 
 
@@ -50,7 +50,7 @@ Når du slår ting sammen så må du hålle kode fra en del inom sin del. Det hj
 
 På denne måten:
 
-<Code>
+```
 // SENSOR-TING
 // defines pins numbers
 const int trigPin = 9;
@@ -59,14 +59,13 @@ const int echoPin = 10;
 long duration;
 int distance;
 //SLUTT PÅ SENSOR-TING
-</Code>
-
+```
 
 ## IF - Hvis noe er sant, gjør dette
 
 [Kode med if satser for å reagere på sensor](ultrasound_rover/ultrasound_rover.ino)
 
-<code>
+```
 // Reagere på sensor
 if(distance <20){
   reverse(120, 120); //Bakke i halv fart (255 er max)
@@ -74,6 +73,4 @@ if(distance <20){
   stop();
 }
 //Slutt på reaksjon
-                  </code>
-
-
+```
