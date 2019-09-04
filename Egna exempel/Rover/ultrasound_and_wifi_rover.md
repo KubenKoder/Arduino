@@ -3,7 +3,7 @@
 Vi ønsker å kombinere disse:
 
 * [Ultrasonic range finder, 4 pin](https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/)
-* [DFRoboshop Rover](https://github.com/KubenKoder/Arduino/blob/master/Egna%20exempel/Rover/readme.md
+* [DFRoboshop Rover](https://github.com/KubenKoder/Arduino/blob/master/Egna%20exempel/Rover/readme.md)
 
 Rovern lytter etter bokstaver w,s,a, og d på seriell-port. Når den mottar en bokstav så kjører den av gårde tils dess at den får ett kommando den ikke kjenner igen. Då stanner den opp.
 
@@ -61,6 +61,8 @@ int distance;
 //SLUTT PÅ SENSOR-TING
 </Code>
 
+
+## IF - Hvis noe er sant, gjør dette
 
 [code med if satser for å reagere på sensor](ultrasound_rover/ultrasound_rover.ino)
 
