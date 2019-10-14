@@ -34,7 +34,7 @@ void setup() {
   }
 
   WiFi.mode(WIFI_STA);
-  WiFiMulti.addAP("Nissen", "bullerbysyndrom");
+  WiFiMulti.addAP("wifi-name", "password");
 }
 
 void loop() {

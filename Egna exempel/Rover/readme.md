@@ -194,7 +194,7 @@ You can edit the code that is uploaded to the ESP8266 and add lines and change t
 
 The ESP8266 is a 3.3V volt mircocontroller and the rover is a 5V Arduino so I have made sure they will not get damaged. 
 
-##### My 3.3 V vs 5V Checklist:
+##### 3.3 V vs 5V Compatibillity:
 * Supply voltage - CHECK, There is a ams1117 5V to 3.3V Linear Regulator on the NODEMCU dev board. Rover outputs ~5V for the bluetooth module. 
 * Input Rx voltage - Esp8266 should be 5V input compatible according to tests, see [source](https://hackaday.com/2016/07/28/ask-hackaday-is-the-esp8266-5v-tolerant/) and [source, expressif CEO](https://www.facebook.com/groups/1499045113679103/permalink/1731855033731442/?hc_location=ufi). So we need not worry.
 * Output voltage / current draw - Should be ok, Rx input is high impedance and should read >~2V as high. See [source](https://learn.sparkfun.com/tutorials/logic-levels/ttl-logic-levels)
