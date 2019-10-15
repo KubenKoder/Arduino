@@ -1,4 +1,4 @@
-#Maximum current test of a NodeMCU V1.0 dev board with a ExpressIf ESP8266 wifi module
+# Maximum current test of a NodeMCU V1.0 dev board with a ExpressIf ESP8266 wifi module
 
 WARNING! These test exceed the maximum ratings set forth by the supplier.
 Excessive current values might damage the microcontroller over time or make it misbehave.

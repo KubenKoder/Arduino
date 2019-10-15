@@ -41,7 +41,7 @@ NOTE!: The Arduino code uses the General Purpose Input / Output pin (GPIO) numbe
 
 ```
 #define firstLED 16 //This LED is connected to the pin marked D0 
-#define secondLED 2 //This LED is connected to the pin marked D4 (Interfears with serial communication, avoid)
+#define secondLED 2 //This LED is connected to the pin marked D4 (Interferes with serial communication, avoid)
 
 void setup() {
   pinMode(firstLED, OUTPUT);
