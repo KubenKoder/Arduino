@@ -80,7 +80,7 @@ The ESP8266 uses 3.3V logic leves and it is directly compatible and can communic
 
 ## Driving external LEDs with the ESP8266
 
-Some online sources claim that you don't need current limiting resistors on the ESP8266, this is a misunderstanding. Don't roast your ESP8266 by skipping over your resistors. [Maximum current test log and discussion](esp8266_current.md)
+Some online sources claim that you don't need current limiting resistors on the ESP8266, this is a misunderstanding. Don't roast your ESP8266 by skipping over your resistors. [Maximum current test log and discussion](esp8266_high_current.md)
 
 ### Example 1: Driving one LED by sinking current (pin LOW = LED on)
 * 20 mA sink current limit
