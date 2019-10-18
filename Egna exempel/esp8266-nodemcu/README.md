@@ -19,7 +19,7 @@ The ESP8266 is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontro
 
 *Pinout of the NodeMCU 1.0 board*
 
-NOTE!: The Arduino code uses the General Purpose Input / Output pin (GPIO) numbers when assigning pin functions, not the numbers on the board. [Pin converter](pins.txt)
+**NOTE!** The Arduino code uses the General Purpose Input / Output pin (GPIO) numbers when assigning pin functions, **not the numbers on the board.** [Pin converter](pins.txt)
 
 ![](img/leds_button.png)
 *[Source](https://lowvoltage.github.io/2017/07/09/Onboard-LEDs-NodeMCU-Got-Two)*
@@ -72,11 +72,12 @@ The ESP8266 uses 3.3V logic leves and it is directly compatible and can communic
 
 [Read more here](https://learn.sparkfun.com/tutorials/logic-levels/all)
 
-## Ratings from supplier
-* GPIO pin voltage 3.3V
-* Max GPIO pin current [12mA source](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf) 
-* Max GPIO pin current [~20 mA sink](https://bbs.espressif.com/viewtopic.php?t=139)
-* Input voltage 5V (USB is connected to Vin pin) 
+## Current and voltage ratings
+* GPIO pin output voltage 3.3V, 5V tolerant signal inputs
+* Max GPIO pin current [12mA source](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf) (source = current flows out of pin)
+* Max GPIO pin current [~20 mA sink](https://bbs.espressif.com/viewtopic.php?t=139) (sink = current flows into pin)
+* Vin input voltage 5V from USB, assume max 500mA if using a generic USB port/charger
+* Teoretical max current from 3.3V pin 800mA from onboard regulator (might require cooling)
 
 ## Driving external LEDs with the ESP8266
 
@@ -100,11 +101,15 @@ Some online sources claim that you don't need current limiting resistors on the 
 ## Recommended pins
 
 When starting out, use the pins with these markings on the board:
-* D1 (GPIO5)
-* D2 (GPIO4)
-* D5 (GPIO14)
-* D6 (GPIO12)
-* D7 (GPIO13)
+
+| Pin Marking on board | Pin number in Arduino IDE |
+| ------------- | ------------- |
+| D1  | GPIO5  |
+| D2  | GPIO4  |
+| D5  | GPIO14  |
+| D6  | GPIO12  |
+| D7  | GPIO13  |
+
 
 When you need more, check the [pin use recommendation table](https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/).
 
