@@ -66,11 +66,14 @@ void loop() {
 * [ESP8622 Community forum](https://www.esp8266.com/)
 * [Arduino Core for ESP8266](https://arduino-esp8266.readthedocs.io/en/2.5.2/)
 
-## Logic levels and 3.3 V vs 5V Compatibillity
+## 3.3 V vs 5V Compatibillity
 
 The ESP8266 uses 3.3V logic leves and it is directly compatible and can communicate with most sensors and microcontrollers that use 5V logic levels. You can for example make a serial connection directly between an arduino UNO and a ESP8266 without any resistors or voltage level adjusters.
 
-[Read more here](https://learn.sparkfun.com/tutorials/logic-levels/all)
+#### Information sources
+* [Sparkfun](https://learn.sparkfun.com/tutorials/logic-levels/all)
+* [Hackaday](https://hackaday.com/2016/07/28/ask-hackaday-is-the-esp8266-5v-tolerant/) 
+* [Expressif CEO confirms on facebook](https://www.facebook.com/groups/1499045113679103/permalink/1731855033731442/?hc_location=ufi) *(PDF backup: [Made 18.10.2019](docs/facebook_5v_expressif.pdf))*
 
 ## Current and voltage ratings
 * GPIO pin output voltage 3.3V, 5V tolerant signal inputs
