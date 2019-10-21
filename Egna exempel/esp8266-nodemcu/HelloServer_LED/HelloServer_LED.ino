@@ -1,11 +1,24 @@
+/* THIS EXAMPLE LETS YOU CONTROL A LED VIA A WEBPAGE THAT IS AVAILABLE ON A PREEXISTING LOCAL NET
+* FOR IT TO WORK YOU NEED TO CONNECT YOUR DEVICE (PC / SMARTPHONE ETC) TO THE SAME WIFI NETWORK AS THE ESP8266
+*
+*How to use:
+*1. Add your wifi network details below
+*2. Upload the code to the ESP8266
+*3. Check the serial monitor for the IP adress of the ESP8266 local webserver
+*4. Connect your PC or smartphone to the same wifi network
+*5. Enter the IP adress like a webpage URL
+*6. Done!
+*/
+
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
 
+// Let the ESP8266 know which network it should connect to
 #ifndef STASSID
-#define STASSID "Red danger"
-#define STAPSK  "struldag"
+#define STASSID "skriv in dit trådløse nett navn her" //Wifi ID
+#define STAPSK  "passord for trådløst nett" // Wifi Password
 #endif
 
 const char* ssid = STASSID;
