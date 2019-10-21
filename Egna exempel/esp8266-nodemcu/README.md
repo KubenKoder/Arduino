@@ -34,7 +34,7 @@ The ESP8266 is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontro
 
 ## Getting started with ESP8266 in the Arduino IDE
 
-*NOTE! I recommend that you change your arduino environment to English before proceeding. To do this, change it in Menu File > Preferences > Editor language. *
+*NOTE! I recommend that you change your arduino environment to English before proceeding. To do this, change it in Menu File > Preferences > Editor language.*
 
 1. Follow the [Official installation instruction for using the Board manager](https://arduino-esp8266.readthedocs.io/en/2.5.2/installing.html#boards-manager) 
  * Make sure you go to Tools > Board: ...> Board manager *Note! Board manager is different from the Library manager*
