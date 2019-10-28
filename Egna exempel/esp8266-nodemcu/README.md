@@ -68,6 +68,8 @@ void loop() {
 ### Further reading
 * [ESP8622 Community forum](https://www.esp8266.com/)
 * [Arduino Core for ESP8266](https://arduino-esp8266.readthedocs.io/en/2.5.2/)
+* [Using separate web page in Arduino](https://circuits4you.com/2016/12/16/esp8266-web-server-html/)
+* [Using separate web page using files](https://randomnerdtutorials.com/esp8266-web-server-spiffs-nodemcu/)
 
 ## 3.3 V vs 5V Compatibillity
 
