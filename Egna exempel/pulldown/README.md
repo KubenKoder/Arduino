@@ -14,15 +14,19 @@ og med denne koden
 * Slå på Tools > Serial plotter
 * Prøve knappen med og uten nedtrekknings-motstand
 
-## Spørsmål
-* Hva er forskellen på 0V-signal og å ikke ha noe koblet til?
+# Spørsmål
+* Hva sker? Hvorfor?
 * Hvorfor trenger vi nedtrekkningsmotstand?
-* (Teoretiskt) Hva hade skjedd hvis vi koblet jord direkte til andre beinet på en 2-polt bryter? 
+* (Teoretiskt) Hva hade skjedd hvis vi koblet  direkte til jord istedet for gjennom et motstand? (HINT: se koblingskjema eller test i tinkercad) 
+
+#Mer Spørsmål
+* Hvordan kobler man en opptrekknings-motstand istedet? Tegne koblingskjema og teste
+* Finn informasjon om input pullup på [https://www.arduino.cc/](https://www.arduino.cc/) og teste uten ekster motstand, funker det også?
+* Finns det noen nackdel/fordel med å bruke pull opp itstedet for pull down?
 
 ## Bonusuppgave
-* Kan nedtrekkningsmotstandet bli for stort?
+* Kan nedtrekkningsmotstandet bli for stort? Teste?
 * Estatt knappen med vridpotentiometer og finn ut ved hvilken spenning den går fra lav til høy signal. Stemmer det med TTL nivåerne? (google)
-
 
 # Bilder
 
