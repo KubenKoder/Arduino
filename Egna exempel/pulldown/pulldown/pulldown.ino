@@ -99,7 +99,9 @@ void loop() {
   
   //Fixed lines, stops zooming
   Serial.print(", Max ");
-  Serial.println(7000);
+  Serial.print(7000);
+  Serial.print(", Min ");
+  Serial.println(-1000); //Note that only this print command is a println = "print line". The others just add text to the same line, have a look in the serial monitor to see.
 
     
   // wait 2 milliseconds before the next loop for the analog-to-digital
