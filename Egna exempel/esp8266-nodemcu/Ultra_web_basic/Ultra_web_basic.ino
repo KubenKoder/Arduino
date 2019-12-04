@@ -106,7 +106,7 @@ if (distanceCM <= limit) {
 String htmlString = String("<html>"
     "<head><meta http-equiv=\"refresh\" content=\"1\"></head>"  //This causes the page to auto update every second
     "<body>"
-    "<p>The distance to the sensor is " + distanceText + "</p>"
+    "<p>The distance to the sensor is " + distanceText + " cm</p>"
     "<p>" + withinLimit + "</p>" 
     "<p><a href=\"/distance\">Check the distance now</a></p>" 
     "</html></body>");
@@ -153,6 +153,7 @@ int ping() {
   duration = pulseIn(echoPin, HIGH);
   // Calculating the distance in milimeters based on the speed of sound in air and the time it took to get a echo divided in two.
   distance= duration*0.034/2;
+  if (distance > 200) distance = 200; // Cap the value to avoid strange values when the signal is lost
   // Prints the distance on the Serial Monitor
   Serial.print("Distance: ");
   Serial.println(distance);
