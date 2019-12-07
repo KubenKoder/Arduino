@@ -26,14 +26,17 @@
 
 // Let the ESP8266 know which network it should connect to
 #ifndef STASSID
-#define STASSID "Red danger" //Wifi ID
-#define STAPSK  "humphrey" // Wifi Password
+#define STASSID "bitraf24" //Wifi ID
+#define STAPSK  "grimbadgerassault" // Wifi Password
 #endif
 
 // defines pins numbers
-const int trigPin = 4; //D1
-const int echoPin = 5; //D2
-const int led = 16;
+const int echoPin = 14; //D5
+const int trigPin = 12; //D6
+const int led = 16; //builtin
+
+//led at gpio 16 available,
+
 const int ledPWR = 2;
 const char* ssid = STASSID;
 const char* password = STAPSK;
