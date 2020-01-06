@@ -45,5 +45,5 @@ I tillegg ønsker vi å måle spenningen på "Button pin" trinnløst (anlogt) me
 * Stemmer det med TTL spenningsnivåerne? (Bruk google for å finne hva de er.) 
 
 ## Utfordring!
-* Finn ett stort motstand, noe metallobjekt og teste capcaitive touch. [Instruskjon])(https://playground.arduino.cc/Main/CapacitiveSensor/). Finns også masse eksempel på youtube :)
+* Finn ett stort motstand, noe metallobjekt og teste capcaitive touch. [Instruskjon](https://playground.arduino.cc/Main/CapacitiveSensor/). Finns også masse eksempel på youtube :)
 * Hvor fungerer capacitive touch? Gjør research på nett! 
