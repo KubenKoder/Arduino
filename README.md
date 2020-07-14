@@ -47,4 +47,11 @@ Hvis Arduino chipen ikke blir gjenkjent som en COM port når du plugger den in k
 [Last Ned](https://github.com/KubenKoder/Arduino/raw/master/USB%20driver/CH341SER.EXE)
 
 
+## Arduino dark theme
+
+1. Legg [denne zip-fil](dark.zip) i *C:\Program Files (x86)\Arduino\lib\theme* mappen
+2. Åpne Arduino IDE, i menyen *Fil>Instillninger* bytt till dark-zip og starte om Arduino IDE
+![](preferences.jpg)
+
+*Kilde [jeffThompson DarkArduinoTheme på github](https://github.com/jeffThompson/DarkArduinoTheme)*
 
