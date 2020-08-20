@@ -24,6 +24,7 @@ _Installation guide_
 * Find the downloaded file in your downloads folder.
 * Unpack the ZIP file (Høyreklikk og "Pakk ut alle" på ZIP fila i Downloads mappen)
 * Run the Arduino program from the folder you unpakked. (Bonus: Right klick and add a shortcut to your desktop for later use.)
+* Test connections by running the blink test progam [Instructions in norwegian](https://www.kjell.com/no/kunnskap/hvordan-virker-det/arduino/introduksjon/arduino-ide)
 * Copy [all this code](https://raw.githubusercontent.com/KubenKoder/Arduino/master/Egna%20exempel/Rover/tank_wasd_keyboard_control/tank_wasd_keyboard_control.ino)
 * Empty the Arduino window and Paste in the code you copied
 * Plug in the Rover USB cable to your PC
