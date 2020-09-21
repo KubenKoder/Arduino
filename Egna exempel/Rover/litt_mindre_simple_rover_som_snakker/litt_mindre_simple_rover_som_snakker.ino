@@ -32,10 +32,10 @@ void fremover() {
 }
 void bakover() {
     Serial.println("nå prøver jeg å rygge!");
-  //kjør belte 1 fremover, full gass
+  //kjør belte 1 bakover, full gass
     digitalWrite(rettning_1, HIGH); //HIGH betyr bakover!
     analogWrite(hastighet_1, 255); //255 er full gass! 100 er slow
-    //kjør belte 2 fremover, full gass
+    //kjør belte 2 bakover, full gass
     digitalWrite(rettning_2, HIGH); //HIGH betyr bakover!
     analogWrite(hastighet_2, 255); //255 er full gass! 100 er slow
 }
