@@ -53,7 +53,7 @@ The circuit for two optional indicator LEDs:
       duration = pulseIn(echoPin, HIGH);  // Reads the echoPin and measures the time until it detects an echo, returns the sound wave travel time in microseconds
       distance= duration*0.034/2; // Calculating the distance from the time it took the soundwave to go back and forth: (duration * 0.034 cm/microsecond)/2
       
-      // Prints the distance in cm on the Serial Monitor
+      // Prints the distance in cm on the Serial Monitor, for our amusement :)
       Serial.print("Distance: ");
       Serial.print(distance);
       Serial.println(" cm");
