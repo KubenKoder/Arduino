@@ -46,6 +46,12 @@ Hvis Arduino chipen ikke blir gjenkjent som en COM port når du plugger den in k
 
 [Last Ned](https://github.com/KubenKoder/Arduino/raw/master/USB%20driver/CH341SER.EXE)
 
+## Arduino NANO
+
+Hvis man bruker de kina-importerte eller pre 2020 Arduino Nano så må man velge "old bootloader"
+
+![](img/old_bootloader.jpg)
+
 
 ## Arduino dark theme
 
