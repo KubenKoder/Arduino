@@ -44,7 +44,7 @@ Levende dokument som Jakob bruker i automatiseringssystem kursene for 2EL 2019.
 
 Hvis Arduino chipen ikke blir gjenkjent som en COM port når du plugger den in kan du installere denne driveren først. Installasjonen av driveren krever admin rettigheter på maskinen.
 
-[Last Ned](https://github.com/KubenKoder/Arduino/raw/master/USB%20driver/CH341SER.EXE)
+[Last Ned](https://github.com/KubenKoder/Arduino/blob/master/USB%20driver/CH341SER_(2019).EXE)
 
 ## Arduino NANO
 
