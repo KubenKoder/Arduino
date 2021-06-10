@@ -52,10 +52,9 @@ The ESP8266 microcontroller can survive currents above the maximum ratings, at l
 I still recommend the use of proper current limiting resistors to reduce the risk of damage to the microcontroller. Especially for continious currents and when driving several leds.. 
 
 ### Claims of built in current limiting
-There are claims in re-sellers data sheets (https://www.kjell.com/no/.mvc/Document/File?id=bc558155-39a5-45ff-b870-aac90077101d) that the ESP8266EX provides "current limiting" on the GPIOs but I don't believe this claim unless I read it in a datasheet from the supplier, it's not a common feature and the supplier make no mention of it.
+There has been claims in re-sellers data sheets (Kjell & Co, they have removed the claims now.) that the ESP8266EX provides "current limiting" on the GPIOs but I don't believe this claim unless I read it in a datasheet from the supplier, it's not a common feature and the supplier make no mention of it.
 
-I belive that the currents above 20mA per pin is limited by internal resistances in the microcontroller and that the "lost power" is heating up the microcontroller and eventually would cause damage.
-To prove this one could solder off the 3.3V regulator and measure the current that goes in and out of the microcontroller. 
+I belive that the currents above 20mA per pin is limited by internal resistances in the microcontroller and that the "lost power" is heating up the microcontroller and eventually would cause damage. To prove this one could solder off the 3.3V regulator and measure the current that goes in and out of the microcontroller. 
 
 
 ### 3.3V to 5V compatablillity
