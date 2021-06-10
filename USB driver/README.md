@@ -10,7 +10,7 @@ If you unzipped the Arduino IDE you can still install the drivers from the unzip
 ## Pirate or bootleg hardware?
 There is often misinformed talk about pirate, copied or bootleg versions of popular development boards even when they board schematics are released open source. Arduino releases all their hardware and software under a share alike license. NodeMCU uses the MIT licence that is even more relaxed.
 * [Arduino licence](https://www.arduino.cc/en/Main/FAQ#toc3)
-* NodeMCU licence](https://github.com/nodemcu/nodemcu-firmware#license)
+* [NodeMCU licence](https://github.com/nodemcu/nodemcu-firmware#license)
 
 # Old Bootloader?
 If you are having trouble programming an Arduino Nano it might help to select "Old bootloader" in the Tools > Processor menu. [Read more here](https://www.arduino.cc/en/Guide/ArduinoNano#toc2)
