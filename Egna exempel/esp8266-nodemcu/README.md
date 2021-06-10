@@ -39,7 +39,7 @@ The ESP8266 is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontro
 1. Follow the [Official installation instruction for using the Board manager](https://arduino-esp8266.readthedocs.io/en/2.5.2/installing.html#boards-manager) 
  * Make sure you go to Tools > Board: ...> Board manager *Note! Board manager is different from the Library manager*
 2. In the Arduino program (the IDE), open **Tools > Board** and select **NodeMCU 1.0**
-3. In the Arduino program (the IDE), open **Tools > Port** and select **COM**-something. (If you can't see any ports, re-install the arduino program to get the drivers.)
+3. In the Arduino program (the IDE), open **Tools > Port** and select **COM**-something. (If you can't see any ports, re-install the arduino program to get the drivers. [Or download and install drivers from here](https://github.com/KubenKoder/Arduino/blob/master/USB%20driver/README.md))
 5. Upload this code to test that eveything works
 
 ```
