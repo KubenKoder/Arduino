@@ -6,7 +6,7 @@ If you unzipped the Arduino IDE you might be missing drivers. The easiest fix is
 
 * 2019 version of the [CH341SER.EXE](CH341SER_(2019).EXE). This is a popular USB to serial chip used on Chinese versions of popular development boards like the Arduino Nano and UNO. (Alternative: [Official download page in Chinese, very slow](http://www.wch.cn/download/CH341SER_EXE.html)). 
 This version of Arduino Nano often needs the "Old bootloader" processor setting for uploading to work, set it to this:
-![old bootloader](img/old_bootloader.jpg)
+![old bootloader](../img/old_bootloader.jpg)
 * [CP210x_Universal_Windows_Driver.zip](CP210x_Universal_Windows_Driver.zip) USB to serial chip used on NodeMCU ESP8266 development boards.
 
 ## Pirate or bootleg hardware?
