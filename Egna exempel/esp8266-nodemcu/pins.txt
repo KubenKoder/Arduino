@@ -1,4 +1,5 @@
-// Automatic NodeMCU board markings conversion 
+// Automatic NodeMCU ESP8266 board markings conversion for arduino
+// Add this block to the beginning of your arduino code, then you can refer to the pins as they are marked on the board
 static const uint8_t D0   = 16;
 static const uint8_t D1   = 5;
 static const uint8_t D2   = 4;
@@ -10,3 +11,7 @@ static const uint8_t D7   = 13;
 static const uint8_t D8   = 15;
 static const uint8_t D9   = 3;
 static const uint8_t D10  = 1;
+
+// Example of use in the code:
+// static const LEDpin = D0; //If you have a LED Attached to the pin marked D0 on the PCB, which the arduino calls GPIO16 (GPIO pin = General Purpose Input/OUtput pin)
+// pinMode(LEDpin, OUTPUT); //Sets GIPO16 to OUTPUT 
