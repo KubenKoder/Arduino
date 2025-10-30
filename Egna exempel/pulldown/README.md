@@ -46,4 +46,7 @@ I tillegg ønsker vi å måle spenningen på "Button pin" trinnløst (anlogt) me
 
 ## Utfordring!
 * Finn ett stort motstand, noe metallobjekt og teste capcaitive touch. [Instruskjon](https://playground.arduino.cc/Main/CapacitiveSensor/). Finns også masse eksempel på youtube :)
-* Hvor fungerer capacitive touch? Gjør research på nett! 
+* Hvor fungerer capacitive touch? Gjør research på nett!
+
+## Praktisk bruk, støy brukt som sensor
+ [Dancing lights](https://github.com/Jaknil/Dancing_lights) ble stillt ut på Skaperfestivalen 2022 i Oslo, der en ardunio måler støy (AnalogRead 0-5V) fra publikum og bruker det for å styre LED lys.
